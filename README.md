@@ -1,0 +1,2 @@
+# SmitePlugin
+Basic Smite Plugin
