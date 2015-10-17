@@ -14,10 +14,15 @@ public class SmitePlugin extends JavaPlugin {
         this.getServer().getLogger().info("SmitePlugin Start");
         this.godStorage = new GodStorage(this);
         this.godStorage.registerGod(new RaGod());
+        this.getServer().getPluginManager().registerEvents(new SmiteListener(this), this);
     }
 
     @Override
     public void onDisable(){
 
+    }
+
+    public GodStorage getGodStorage(){
+        return godStorage;
     }
 }

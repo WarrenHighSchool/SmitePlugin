@@ -1,6 +1,9 @@
 package io.github.warrenhigh.mc.smite;
 
+import org.bukkit.entity.Player;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -8,15 +11,24 @@ import java.util.List;
  */
 public class GodStorage {
 
+    HashMap<Player, God> playerGodMap;
     List<God> godList;
     SmitePlugin plugin;
 
     public GodStorage(SmitePlugin plugin){
         this.plugin = plugin;
-        godList = new ArrayList<>();
+        this.playerGodMap = new HashMap<>();
+        this.godList = new ArrayList<>();
     }
 
     public void registerGod(God god){
+        plugin.getServer().getLogger().info("God " + god.name + " has been Registered");
         godList.add(god);
+    }
+
+    public void doAbilityOne(Player player, Player victim){
+        if (playerGodMap.containsKey(player)){
+            playerGodMap.get(player).abilityOne(victim);
+        }
     }
 }

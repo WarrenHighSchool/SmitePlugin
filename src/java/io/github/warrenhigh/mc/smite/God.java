@@ -5,14 +5,21 @@ import org.bukkit.entity.Player;
 /**
  * Created by Mario Segura on 10/17/15.
  */
-public interface God {
+public abstract class God {
     int godID = 0;
 
-    public void abilityOne(Player victim);
+    String name = "GOD";
 
-    public void abilityTwo(Player victim);
+    public abstract void abilityOne(Player victim);
 
-    public void abilityThree(Player player);
+    public abstract void abilityTwo(Player victim);
 
-    public void abilityFour(Player victim);
+    public abstract void abilityThree(Player player);
+
+    public abstract void abilityFour(Player victim);
+
+    public God(String name, int id){
+        godID = id;
+        this.name = name;
+    }
 }
