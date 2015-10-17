@@ -7,9 +7,13 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class SmitePlugin extends JavaPlugin {
 
+    public GodStorage godStorage;
+
     @Override
     public void onEnable(){
-
+        this.getServer().getLogger().info("SmitePlugin Start");
+        this.godStorage = new GodStorage(this);
+        this.godStorage.registerGod(new RaGod());
     }
 
     @Override
