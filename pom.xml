@@ -42,12 +42,12 @@
     <build>
         <finalName>SmitePlugin</finalName>
         <defaultGoal>clean install</defaultGoal>
-        <sourceDirectory>${basedir}/src/main/java/</sourceDirectory>
+        <sourceDirectory>${basedir}/src/java/</sourceDirectory>
         <resources>
             <resource>
                 <targetPath>.</targetPath>
                 <filtering>true</filtering>
-                <directory>${basedir}/src/main/resources/</directory>
+                <directory>${basedir}/src/resources/</directory>
                 <includes>
                     <include>*.yml</include>
                 </includes>
