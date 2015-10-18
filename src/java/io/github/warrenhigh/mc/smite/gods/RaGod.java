@@ -1,5 +1,6 @@
-package io.github.warrenhigh.mc.smite;
+package io.github.warrenhigh.mc.smite.gods;
 
+import io.github.warrenhigh.mc.smite.God;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
@@ -38,7 +39,7 @@ public class RaGod extends God {
         victim.sendMessage(ChatColor.GOLD + "[RPG] You have been attacked by Ra");
     }
 
-    public RaGod(){
-        super("Ra", 1);
+    public RaGod(String name, int id){
+        super(name, id);
     }
 }
