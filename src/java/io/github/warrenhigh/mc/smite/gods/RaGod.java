@@ -2,6 +2,10 @@ package io.github.warrenhigh.mc.smite.gods;
 
 import io.github.warrenhigh.mc.smite.God;
 import net.md_5.bungee.api.ChatColor;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -35,7 +39,8 @@ public class RaGod extends God {
     @Override
     public void abilityFour(Player victim) {
         // Explosion
-        victim.getWorld().createExplosion(victim.getLocation(), 5);
+        victim.getWorld().strikeLightningEffect(victim.getLocation());
+        victim.setHealth(victim.getHealth() / 2);
         victim.sendMessage(ChatColor.GOLD + "[RPG] You have been attacked by Ra");
     }
 
