@@ -49,4 +49,8 @@ public class GodStorage {
             playerGodMap.get(player).abilityFour(victim);
         }
     }
+
+    public void setPlayerGod(Player player, String godName){
+
+    }
 }
