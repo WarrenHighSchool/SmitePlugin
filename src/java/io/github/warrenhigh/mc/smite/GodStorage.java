@@ -1,5 +1,6 @@
 package io.github.warrenhigh.mc.smite;
 
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -51,6 +52,18 @@ public class GodStorage {
     }
 
     public void setPlayerGod(Player player, String godName){
-
+        God god = null;
+        for (God currGod : godList ){
+            if (currGod.name.equalsIgnoreCase(godName)){
+                god = currGod;
+                break;
+            }
+        }
+        if (god != null) {
+            playerGodMap.put(player, god);
+            player.sendMessage(ChatColor.GOLD + "[RPG] God assigned");
+        } else {
+            player.sendMessage(ChatColor.RED + "[RPG] Invalid God");
+        }
     }
 }
