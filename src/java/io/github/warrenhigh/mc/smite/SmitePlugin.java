@@ -24,6 +24,8 @@ public class SmitePlugin extends JavaPlugin {
         this.godStorage.registerGod(new LokiGod("Loki", 7));
 
         this.getServer().getPluginManager().registerEvents(new SmiteListener(this), this);
+
+        this.getCommand("smite").setExecutor(new SmiteCommand(this));
     }
 
     @Override
