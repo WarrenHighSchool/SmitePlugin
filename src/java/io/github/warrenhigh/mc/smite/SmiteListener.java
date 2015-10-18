@@ -43,12 +43,15 @@ public class SmiteListener implements Listener {
                     break;
                 case 1:
                     // Ability 2
+                    godStorage.doAbilityTwo(damager, victim);
                     break;
                 case 2:
                     // Ability 3
+                    godStorage.doAbilityThree(damager, victim);
                     break;
                 case 3:
                     // Ability 4
+                    godStorage.doAbilityFour(damager, victim);
                     break;
                 default:
                     break;

@@ -31,4 +31,22 @@ public class GodStorage {
             playerGodMap.get(player).abilityOne(victim);
         }
     }
+
+    public void doAbilityTwo(Player player, Player victim){
+        if (playerGodMap.containsKey(player)){
+            playerGodMap.get(player).abilityTwo(victim);
+        }
+    }
+
+    public void doAbilityThree(Player player, Player victim){
+        if (playerGodMap.containsKey(player)){
+            playerGodMap.get(player).abilityThree(player);
+        }
+    }
+
+    public void doAbilityFour(Player player, Player victim){
+        if (playerGodMap.containsKey(player)){
+            playerGodMap.get(player).abilityFour(victim);
+        }
+    }
 }
