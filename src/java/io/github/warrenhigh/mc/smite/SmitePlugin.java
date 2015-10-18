@@ -26,6 +26,7 @@ public class SmitePlugin extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new SmiteListener(this), this);
 
         this.getCommand("smite").setExecutor(new SmiteCommand(this));
+        this.getCommand("opsmite").setExecutor(new OPSmiteCommand(this));
     }
 
     @Override
