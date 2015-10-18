@@ -24,7 +24,7 @@ public class AnubisGod extends God {
 
     @Override
     public void abilityFour(Player victim) {
-
+        // Blindness
     }
 
     public AnubisGod(String anubis, int i) {

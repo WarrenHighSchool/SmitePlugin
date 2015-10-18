@@ -1,20 +1,9 @@
 package io.github.warrenhigh.mc.smite;
 
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.block.Block;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
 
 /**
  * Created by Mario Segura on 10/17/15.

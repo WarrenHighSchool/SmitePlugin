@@ -21,7 +21,7 @@ public class RaGod extends God {
     @Override
     public void abilityTwo(Player victim) {
         // Poison
-        victim.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 20, 1));
+        victim.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 20 * 4, 1));
         victim.sendMessage(ChatColor.GOLD + "[RPG] You have been attacked by Ra");
     }
 

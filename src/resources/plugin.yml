@@ -1,3 +1,6 @@
 main: io.github.warrenhigh.mc.smite.SmitePlugin
 name: SmitePlugin
 version: 0.1
+commands:
+  smite:
+    description: Smite
